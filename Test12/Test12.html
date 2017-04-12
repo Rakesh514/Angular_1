@@ -1,0 +1,33 @@
+<!--ng-show and ng-hide-->
+<html ng-app = "mod">
+<head>
+	<script src="../angular.js"></script>
+	<script src="test12.js"></script>
+</head>
+<body>
+	<h1>Hello</h1>
+	
+	<div ng-controller="ctrl as c">
+	
+		<p> ng-if demo checkbox </p>
+		<input type="checkbox" ng-model="c.somecheckboxvariable" /> <!--'somecheckboxvariable' is a variable which is assigned to model. So, whatever value
+		user provides for the element is assigned to 'somecheckboxvariable'. If the input element was of type, 'text' the user provided value could be some text.
+		But in the above case, the user can either check on uncheck as it is a checkbox. So, the possible values 'somecheckboxvariable' variable can take are booleans,
+		either 'true' or 'false'. So the value of the variable can be used for evaluation as show below in 'ng-if' or 'ng-hide' and 'ng-show'-->
+		<p ng-if="c.somecheckboxvariable">ng-if text</p>
+		<!--The difference between 'ng-if' and 'ng-show' or 'ng-hide' is that, with 'ng-if', the whole element is removed from the DOM when the expression resolves
+		to false. With 'ng-show' or 'ng-hide', the HTML attributes 'show' or 'hide' is set, instead. The element remains, but depending on the condition, the element 
+		is made visible or hidden-->
+
+		<p> ng-show demo checkbox </p>
+		<input type="checkbox" ng-model="c.ngshowdemovariable" />
+		<p ng-show="c.ngshowdemovariable">ng-show text</p>
+		
+		<p> ng-hide demo checkbox </p>
+		<input type="checkbox" ng-model="c.nghidedemovariable" />
+		<p ng-hide="c.nghidedemovariable">ng-hide text</p>
+
+	</div>
+	
+</body>
+</html>

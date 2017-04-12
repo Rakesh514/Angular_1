@@ -1,0 +1,24 @@
+<html ng-app = "mod">
+<head>
+	<script src="angular.js"></script>
+</head>
+<body>
+	<h1>Hello</h1>
+	
+	<div ng-controller="cntrl">
+		<p ng-if="hrs > 5"> Greater than 5 </p>
+		<p ng-if="hrs < 5"> Lesser than 5 </p>
+	</div>
+	
+	<script>
+		var m = angular.module("mod", []);
+		m.controller("cntrl", func);
+		
+		function func($scope)
+		{
+			$scope.hrs = 9;
+		}
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,12 @@
+<html ng-app>
+<head>
+	<script src="angular.js"></script>
+</head>
+<body ng-init="hoursOfDay = 9">
+	<h1>Hello</h1>
+	<p ng-if="hoursOfDay > 5">Greater than 5</p>
+	<p ng-if="hoursOfDay < 5">Lesser than 5</p>
+	<p ng-bind="hoursOfDay"> This text won't be displayed </p>
+	<p> {{hoursOfDay}} This text will be displayed </p>
+</body>
+</html>

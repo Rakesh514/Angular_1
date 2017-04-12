@@ -1,0 +1,20 @@
+<!-- angular modules -->
+<html ng-app = "mod">
+<head>
+	<script src="../angular.js"></script>
+	<script src="test17.js"></script>
+	<script src="dependentmodule.js"></script>
+</head>
+<body>
+	<h1>Hello</h1>
+	
+	<div ng-controller="ctrl">
+		<p> {{val1}} </p>
+	</div>
+	
+	<div ng-controller="ctrl2">
+		<p> {{val2}} </p>
+	</div>
+	
+</body>
+</html>

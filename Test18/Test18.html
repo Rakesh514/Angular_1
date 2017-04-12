@@ -1,0 +1,27 @@
+<!--Sample app - TODO App-->
+<html ng-app = "mod">
+<head>
+	<script src="../angular.js"></script>
+	<script src="test18.js"></script>
+</head>
+<body>
+	<h1>TODO App</h1>
+	
+	<div ng-controller="ctrl as c">
+		<input type="text" ng-model="c.newItem">
+		<button ng-click="c.addToList()">Add</button>
+		
+		<p/>
+		<div ng-repeat="a in c.arr">
+			<input type="text" ng-show="c.edit" value="{{a}}" ng-model="a"> <!--this does not update the array, 'arr'. check what 'res' displays-->
+			<input type="text" ng-hide="c.edit" value="{{a}}" disabled=true>
+		</div>
+		<p>
+			<button ng-click="c.editList()">Edit</button>
+			<button ng-click="c.updateList()">Done</button>
+			<p>{{c.res}}</p>
+		</p>
+	</div>
+	
+</body>
+</html>

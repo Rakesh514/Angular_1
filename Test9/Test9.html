@@ -1,0 +1,18 @@
+<!--Nested controllers and scope hierarchy-->
+<html ng-app = "mod">
+<head>
+	<script src="../angular.js"></script>
+	<script src="test9.js"></script>
+</head>
+<body>
+	<h1>Hello</h1>
+	
+	<div ng-controller="ctrl1">
+		<p>input text: {{newtext}}</p> <!--ng-bind could be used instead-->
+		<div ng-controller="ctrl2">
+			<p>input text: {{newtext}}</p>
+		</div>
+	</div>
+	
+</body>
+</html>

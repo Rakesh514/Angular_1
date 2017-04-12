@@ -1,0 +1,17 @@
+<!--ng-repeat-->
+<html ng-app = "mod">
+<head>
+	<script src="../angular.js"></script>
+	<script src="test14.js"></script>
+</head>
+<body>
+	<h1>Hello</h1>
+	
+	<div ng-controller="ctrl as c">
+		<p ng-repeat="i in c.arr">
+			{{i}}
+		</p>
+	</div>
+	
+</body>
+</html>
